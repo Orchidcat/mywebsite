@@ -17,5 +17,21 @@
 		
 	安装jekyll<br>
 		gem install jekyll<br>
+		
+<hr/>
+		
+	jekyll new myblog error 解决方法:<a href="http://blog.csdn.net/simple_the_best/article/details/50639842">
+	Dependency Error: Yikes! It looks like you don’t have kramdown or one of its <br>
+	dependencies installed. In order to use Jekyll as currently configured, <br>
+	you’ll need to install this gem. The full error message from Ruby is: <br>
+	‘cannot load such file – kramdown’ If you run into trouble, <br>
+	you can find helpful resources at http://jekyllrb.com/help/!
+	</a>
+	gem install kramdown<br>
+	解决办法 :<br>
+	bundle exec jekyll serve --watch
+	在之前的命令 jekyll serve --watch 加上bundle exec . 因为我使用了 bundler 管理了gems.
+	参考:https://github.com/jekyll/jekyll/issues/3084
+<hr/>	
 </body>
 </html>
