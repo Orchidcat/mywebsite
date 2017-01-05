@@ -42,6 +42,52 @@
   <br>
 <HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="80%" color=#987cb9 SIZE=1>
   <h1>2016-01-05</h1><br>
-  git 分支学习
+	
+	<h2>git 分支学习</h2>
+	
+	
+	Git 保存的不是文件的变化或者差异，而是一系列不同时刻的文件快照。<br>
+	Git 的分支，其实本质上仅仅是指向提交对象的可变指针。<br>
+	
+	由于 Git 的分支实质上仅是包含所指对象校验和（长度为 40 的 SHA-1 值字符串）的文件，<br>
+	所以它的创建和销毁都异常高效。 <br>
+	创建一个新分支就像是往一个文件中写入 41 个字节（40 个字符和 1 个换行符），如此的简单能不快吗？<br>
+	
+	https://www.git-scm.com/book/en/v2/book/03-git-branching/images/branch-and-history.png<br>
+	
+	<h3>分支的创建</h3><br>
+	git branch testing<br>
+	https://www.git-scm.com/book/en/v2/book/03-git-branching/images/two-branches.png<br>
+	
+	git branch 命令仅仅 创建 一个新分支，并不会自动切换到新分支中去。<br>
+	
+	https://www.git-scm.com/book/en/v2/book/03-git-branching/images/head-to-master.png<br>
+	
+	
+	git log --oneline --decorate  查看各个分支当前所指的对象<br>
+
+	<h3>分支的切换</h3><br>
+	git checkout testing  --HEAD 就指向 testing 分支<br>
+	https://www.git-scm.com/book/en/v2/book/03-git-branching/images/head-to-testing.png
+	
+	<span>分支切换会改变你工作目录中的文件</span>
+	
+	查看分叉历史: git log --oneline --decorate --graph --all
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 </html>
