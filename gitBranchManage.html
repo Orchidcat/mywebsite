@@ -1,0 +1,96 @@
+<html>
+<body>
+Git 保存的不是文件的变化或者差异，而是一系列不同时刻的文件快照。<br>
+	Git 的分支，其实本质上仅仅是指向提交对象的可变指针。<br>
+	
+	由于 Git 的分支实质上仅是包含所指对象校验和（长度为 40 的 SHA-1 值字符串）的文件，<br>
+	所以它的创建和销毁都异常高效。 <br>
+	创建一个新分支就像是往一个文件中写入 41 个字节（40 个字符和 1 个换行符），如此的简单能不快吗？<br>
+	
+	<img src="https://www.git-scm.com/book/en/v2/book/03-git-branching/images/branch-and-history.png">
+	<br>
+	
+	<h3>分支的创建</h3><br>
+	git branch testing<br>
+	<img src="https://www.git-scm.com/book/en/v2/book/03-git-branching/images/two-branches.png">	
+	<br>
+	
+	git branch 命令仅仅 创建 一个新分支，并不会自动切换到新分支中去。<br>
+	<img src="https://www.git-scm.com/book/en/v2/book/03-git-branching/images/head-to-master.png">	
+	<br>
+	
+	
+	git log --oneline --decorate  查看各个分支当前所指的对象<br>
+
+	<h3>分支的切换</h3><br>
+	git checkout testing  --HEAD 就指向 testing 分支<br>
+	<img src="https://www.git-scm.com/book/en/v2/book/03-git-branching/images/head-to-testing.png">
+	
+	<span>分支切换会改变你工作目录中的文件</span>
+	
+	查看分叉历史: git log --oneline --decorate --graph --all
+	
+	<h3>分支的合并</h3><br>
+	
+	git merge<br>
+	<img src="https://www.git-scm.com/book/en/v2/book/03-git-branching/images/basic-merging-1.png"><br>
+	<img src="https://www.git-scm.com/book/en/v2/book/03-git-branching/images/basic-merging-2.png"><br>
+	
+	<h4>遇到冲突时的分支合并</h4><bR>
+	
+	分支对同一个文件做了修改,Git做合并时,将不会自动创建一个新的合并提交. <br>
+	Git会停下来,等待你解决冲突问题. <br>
+	你可以在合并冲突后的任意时刻<br>
+	使用 git status 命令来查看那些因包含合并冲突而处于未合并（unmerged）状态的文件<br>
+	
+	图形化冲突文件git mergetool<br>
+	
+	
+	
+	<h3>分支管理</h3><br>
+	
+	git branch       分支列表<br>
+				-v   每个分支的最后一次提交<br>
+				--merged    过滤已经合并分支<br>
+				--no-merged 过滤尚未合并分支<br>
+				-d   删除分支(如有冲突会给出提示)<br>
+				-D   强制删除分支
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
+
+
+
+
